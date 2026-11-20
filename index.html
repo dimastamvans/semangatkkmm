@@ -1,121 +1,192 @@
 <!DOCTYPE html>
 <html lang="id"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>KK MM - MALAM SABTU HOROR</title>
-<link href="https://fonts.googleapis.com/css2?family=Creepster&family=Poppins:wght@400;700;900&display=swap" rel="stylesheet">
+<title>KKMM PARTY - DISKOTIK KAMPUNG KECIL</title>
+<link href="https://fonts.googleapis.com/css2?family=Bungee&family=Poppins:wght@400;700;800;900&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
-body{background:#050505;color:#fff;overflow-x:hidden;text-align:center;padding-bottom:40px}
-.moon{width:90px;height:90px;background:#FF0000;border-radius:50%;box-shadow:0 0 80px #FF0000,0 0 120px #FF0000;margin:18px auto 0;position:relative}
-.moon:after{content:'🌕';position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:50px;opacity:.25}
-h1{font-family:'Creepster',cursive;font-size:52px;color:#FF0000;text-shadow:0 0 20px #FF0000,0 0 40px #000;letter-spacing:2px;margin-top:6px}
-h1 span{color:#fff}.sub{color:#A0B3A8;font-size:12px;letter-spacing:3px}
-.hantu{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin:16px 0}
-.hantu span{font-size:48px;animation:goyang 2s infinite;display:inline-block;cursor:pointer;transition:.2s;background:#111;border:1px solid #333;width:68px;height:68px;border-radius:50%;line-height:68px}
-.hantu span:active{transform:scale(1.4) rotate(10deg);background:#FF0000}
-.hantu span:nth-child(2){animation-delay:.3s}.hantu span:nth-child(3){animation-delay:.6s}.hantu span:nth-child(4){animation-delay:.9s}.hantu span:nth-child(5){animation-delay:1.2s}
-@keyframes goyang{0%,100%{transform:translateY(0) rotate(-3deg)}50%{transform:translateY(-14px) rotate(3deg)}}
-.kabut{background:linear-gradient(180deg,#111,#050505);border:1px solid #FF0000;border-radius:18px;margin:14px;padding:18px;box-shadow:0 0 25px #FF000022}
-.arab{font-size:26px;color:#00FF41;line-height:1.6;direction:rtl}.latin{font-size:12px;color:#FFD700}.arti{font-size:13px;color:#ddd;line-height:1.6}
-.semangat{font-size:22px;font-weight:900;line-height:1.4;margin:10px 0}.semangat b{color:#FF0000}.semangat i{color:#00FF41;font-style:normal}
-.card{background:#0D0D0D;border:1px solid #333;border-radius:14px;padding:14px;margin:10px;text-align:left}.card b{color:#FF8C00}.card p{font-size:13px;color:#ccc;line-height:1.6}
-.btn{border:none;padding:14px 18px;border-radius:12px;font-weight:900;width:100%;margin:6px 0;cursor:pointer;font-size:14px}
-.btn-red{background:#FF0000;color:#fff;box-shadow:0 0 20px #FF0000}.btn-green{background:#00FF41;color:#000}.btn-dark{background:#222;color:#fff}
-.darah{color:#FF0000;font-size:12px}
-#toast{position:fixed;top:38%;left:50%;transform:translate(-50%,-50%) scale(0);background:#FF0000;color:#fff;padding:14px 18px;border-radius:12px;font-weight:900;z-index:999;box-shadow:0 0 30px #FF0000;transition:.2s;max-width:85%;font-size:14px;line-height:1.4}
+body{background:#08000F;color:#fff;overflow-x:hidden}
+a{text-decoration:none}
+/* LAYAR BUKA PARTY */
+#gate{position:fixed;inset:0;background:radial-gradient(circle at 50% 20%,#4B0082,#08000F 70%);z-index:9999;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:20px;text-align:center;transition:.5s}
+#gate.hide{opacity:0;pointer-events:none;transform:scale(1.1)}
+#gate .bola-big{width:110px;height:110px;border-radius:50%;background:conic-gradient(#fff,#FF00FF,#00E5FF,#FFD700,#FF0000,#fff);animation:putar 2s linear infinite;box-shadow:0 0 60px #FF00FF;display:flex;align-items:center;justify-content:center;font-size:40px}
+@keyframes putar{to{transform:rotate(360deg)}}
+#gate h1{font-family:'Bungee';font-size:44px;line-height:1;margin:16px 0 8px;text-shadow:0 0 25px #FF00FF}
+#gate h1 i{color:#FFD700;font-style:normal}#gate h1 em{color:#00FF41;font-style:normal}
+#gate p{color:#ddd;font-size:13px;line-height:1.6}
+.btn-gate{margin-top:18px;background:linear-gradient(90deg,#FF00FF,#FF0066);border:none;color:#fff;font-weight:900;font-size:18px;padding:18px 28px;border-radius:99px;box-shadow:0 0 35px #FF00FF;cursor:pointer;animation:denyut 1s infinite;width:100%;max-width:320px}
+@keyframes denyut{50%{transform:scale(1.05)}}
+.btn-gate2{margin-top:10px;background:#111;border:1px solid #333;color:#aaa;font-weight:700;font-size:12px;padding:10px 18px;border-radius:99px;cursor:pointer}
+/* TOPBAR + HERO */
+.topbar{background:#000;padding:10px 14px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:99}
+.logo{font-family:'Bungee';font-size:20px}.logo b{color:#FF00FF}.logo span{color:#00E5FF}
+.live{background:#FF0000;padding:5px 10px;border-radius:99px;font-size:11px;font-weight:800;animation:kedip 1s infinite}
+@keyframes kedip{50%{opacity:.4}}
+.hero{text-align:center;padding:18px 14px 0;background:radial-gradient(circle at 50% 0%,#3B0066 0%,#08000F 70%)}
+.hero h1{font-family:'Bungee';font-size:42px;line-height:1;text-shadow:0 0 25px #FF00FF}
+.hero h1 i{color:#FFD700;font-style:normal}.hero h1 em{color:#00FF41;font-style:normal}
+.hero p{color:#ccc;font-size:13px;margin-top:8px;line-height:1.6}
+.badge{display:inline-block;background:linear-gradient(90deg,#FF00FF,#00E5FF);padding:6px 14px;border-radius:99px;font-size:11px;font-weight:900;margin-top:10px}
+.bola-wrap{display:flex;justify-content:center;gap:14px;margin:14px 0}
+.bola{width:70px;height:70px;border-radius:50%;background:conic-gradient(#fff,#FF00FF,#00E5FF,#FFD700,#FF0000,#fff);animation:putar 2.5s linear infinite;box-shadow:0 0 40px #FF00FF}
+.stage{margin:14px;background:linear-gradient(180deg,#1B0033,#0A0014);border:2px solid #FF00FF;border-radius:22px;padding:16px 10px 12px;box-shadow:0 0 35px #FF00FF44}
+.stage-top{display:flex;justify-content:space-between;font-size:11px;font-weight:800}.stage-top b{color:#FFD700}.stage-top span{color:#00FF41}
+.lampu-strip{height:8px;border-radius:99px;background:linear-gradient(90deg,#FF0000,#FFD700,#00FF41,#00E5FF,#FF00FF,#FF0000);background-size:200% 100%;animation:geser 1s linear infinite;margin:10px 0}
+@keyframes geser{to{background-position:200% 0}}
+.roblox-row{display:flex;justify-content:center;gap:10px;margin-top:10px;flex-wrap:wrap}
+.rb{width:76px;cursor:pointer;transition:.2s}.rb:active{transform:scale(1.15)}
+.rb-head{width:44px;height:40px;margin:0 auto;border:3px solid #000;border-radius:4px;position:relative;overflow:hidden}
+.rb-head .mata{position:absolute;top:14px;width:7px;height:10px;background:#000;border-radius:50%}.rb-head .mata.l{left:7px}.rb-head .mata.r{right:7px}
+.rb-head .mulut{position:absolute;bottom:6px;left:50%;transform:translateX(-50%);width:14px;height:4px;background:#000;border-radius:99px}
+.rb-head .rambut{position:absolute;top:0;left:0;right:0;height:12px;background:#111}
+.rb-body{width:46px;height:44px;margin:2px auto 0;border:3px solid #000;border-radius:3px;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:11px;color:#fff;text-shadow:1px 1px 0 #000}
+.rb-arms{display:flex;justify-content:space-between;width:46px;margin:0 auto}.rb-arms i{width:11px;height:30px;border:2px solid #000;display:block;background:#FFD700}
+.rb-legs{display:flex;justify-content:space-between;width:46px;margin:0 auto}.rb-legs i{width:17px;height:24px;border:2px solid #000;display:block;background:#1E90FF}
+.rb-name{text-align:center;font-size:10px;font-weight:900;margin-top:4px;line-height:1.2}.rb-name small{display:block;font-size:9px;font-weight:400;color:#aaa}
+.c-den .rb-head{background:#FFD700}.c-den .rb-body{background:#FF0000}.c-den .rb-legs i{background:#111}
+.c-ayu .rb-head{background:#FFC0CB}.c-ayu .rb-body{background:#00E5FF;color:#000;text-shadow:none}.c-ayu .rb-arms i{background:#FFC0CB}.c-ayu .rb-legs i{background:#FF00FF}
+.c-budi .rb-head{background:#8B5A2B}.c-budi .rb-body{background:#00FF41;color:#000;text-shadow:none}.c-budi .rb-arms i{background:#8B5A2B}.c-budi .rb-legs i{background:#222}
+.c-sari .rb-head{background:#FFF}.c-sari .rb-body{background:#7B00FF}.c-sari .rb-arms i{background:#FFF}.c-sari .rb-legs i{background:#FFD700}
+.joget .rb{animation:joget .5s infinite}.joget .rb:nth-child(2){animation-delay:.1s}.joget .rb:nth-child(3){animation-delay:.2s}.joget .rb:nth-child(4){animation-delay:.3s}
+.joget .rb-head{animation:geleng .4s infinite}.joget .rb-arms i{animation:tangan .4s infinite}.joget .rb-legs i{animation:kaki .4s infinite}
+@keyframes joget{0%,100%{transform:translateY(0) rotate(-3deg)}50%{transform:translateY(-12px) rotate(3deg)}}
+@keyframes geleng{0%,100%{transform:rotate(-8deg)}50%{transform:rotate(8deg)}}
+@keyframes tangan{0%,100%{transform:rotate(-18deg)}50%{transform:rotate(18deg) translateY(-5px)}}
+@keyframes kaki{0%,100%{transform:rotate(0)}50%{transform:rotate(12deg)}}
+.floor{height:10px;background:repeating-linear-gradient(90deg,#FF00FF 0 20px,#00E5FF 20px 40px,#FFD700 40px 60px,#00FF41 60px 80px);border-radius:99px;margin-top:10px;animation:geser 1s linear infinite;background-size:200% 100%}
+.card{margin:12px;background:#14002A;border:1px solid #2A0050;border-radius:20px;padding:18px}
+.card h2{font-size:16px;line-height:1.4}.card h2 b{color:#FFD700}.card h2 i{color:#00FF41;font-style:normal}
+.card p{font-size:13px;color:#ddd;line-height:1.7;margin-top:8px}
+.poin{margin-top:12px;display:flex;flex-direction:column;gap:10px}
+.poin div{background:#0A0014;border:1px solid #333;border-radius:14px;padding:12px;display:flex;gap:10px;align-items:flex-start}
+.poin div b{font-size:22px}.poin div p{margin:0;font-size:13px;line-height:1.5}.poin div p strong{color:#FFD700}
+.btn{width:100%;border:none;padding:15px;border-radius:14px;font-weight:900;font-size:14px;margin:6px 0;cursor:pointer}
+.btn-pink{background:linear-gradient(90deg,#FF00FF,#FF0066);color:#fff;box-shadow:0 8px 25px #FF00FF66}
+.btn-hijau{background:#00FF41;color:#000}.btn-cyan{background:#00E5FF;color:#000}.btn-gelap{background:#222;color:#fff}
+.quote{background:linear-gradient(135deg,#FF00FF,#00E5FF);border-radius:20px;margin:12px;padding:18px;text-align:center}
+.quote h3{font-family:'Bungee';font-size:20px;line-height:1.3}.quote p{font-size:12px;margin-top:8px;opacity:.9}
+#toast{position:fixed;top:32%;left:50%;transform:translate(-50%,-50%) scale(0);background:#FF00FF;color:#fff;padding:14px 18px;border-radius:14px;font-weight:900;z-index:10000;box-shadow:0 0 30px #FF00FF;transition:.2s;max-width:85%;text-align:center;font-size:13px;line-height:1.5}
 #toast.show{transform:translate(-50%,-50%) scale(1)}
+.confetti{position:fixed;top:-20px;z-index:9998;pointer-events:none;animation:jatuh linear forwards}
+@keyframes jatuh{to{transform:translateY(110vh) rotate(720deg);opacity:.9}}
+.footer{text-align:center;font-size:11px;color:#888;line-height:1.7;padding:10px 14px 30px}
 </style></head><body>
 
+<!-- LAYAR BUKA PARTY -->
+<div id="gate">
+<div class="bola-big">🪩</div>
+<h1>KKMM<br><i>WEEKEND</i><br><em>PARTY!</em></h1>
+<p>Diskotik Kampung Kecil<br>Musik langsung nyala pas lu klik tombol di bawah!<br><b style="color:#FFD700">Siap joget? Siap gas kerja besok?</b></p>
+<button class="btn-gate" onclick="bukaParty()">🪩 BUKA PARTY KKMM 🪩</button>
+<button class="btn-gate2" onclick="masukDiem()">Masuk tanpa musik dulu</button>
+<p style="font-size:11px;color:#888;margin-top:12px">Klik BUKA PARTY biar musik + lampu + joget langsung jalan.<br>Browser nge-block musik kalo belum di-klik, jadi harus klik sekali.</p>
+</div>
+
 <div id="toast"></div>
-<div class="moon"></div>
-<h1>KK <span>MM</span></h1>
-<p class="sub">KAMPUNG KECIL • MALAM SABTU • 21 NOV 2026</p>
-<p class="darah">🩸 Jangan buka sendirian tengah malam... 🩸</p>
+<div class="topbar"><div class="logo">KK<b>MM</b> <span>PARTY</span></div><div class="live">● LIVE PARTY</div></div>
 
-<div class="hantu">
-<span onclick="hantuKlik('pocong',this)" title="Pocong - Klik!">👻</span>
-<span onclick="hantuKlik('kuntilanak',this)" title="Kuntilanak - Klik!">🧛‍♀️</span>
-<span onclick="hantuKlik('tuyul',this)" title="Tuyul - Klik!">👶</span>
-<span onclick="hantuKlik('genderuwo',this)" title="Genderuwo - Klik!">👹</span>
-<span onclick="hantuKlik('sundel',this)" title="Sundel Bolong - Klik!">💀</span>
-</div>
-<p style="font-size:11px;color:#888">Klik hantunya SATU-SATU, suaranya beda-beda! 👆</p>
-
-<div class="kabut">
-<p style="color:#FF8C00;font-weight:800;letter-spacing:2px">⚠️ PESAN BUAT TIM KAMPUNG KECIL ⚠️</p>
-<div class="semangat">SEMANGAT YA<br>KAWAN-KAWAN!<br><b>BESOK KITA KERJA,</b><br><i>JANGAN CAPE,</i><br><i>JANGAN NGELUH.</i></div>
-<p style="font-size:14px;line-height:1.6">ALLAH GASUKA SAMA YANG BANYAK NGELUH.<br>Cape itu wajar, ngeluh terus yang bikin rezeki seret.<br>Kerja bareng, cape bareng, untung bareng.</p>
-<br>
-<div class="arab">إِنَّ مَعَ الْعُسْرِ يُسْرًا</div>
-<div class="latin">Inna ma'al 'usri yusra</div>
-<p class="arti">"Sesungguhnya bersama kesulitan ada kemudahan"<br><b style="color:#00FF41">QS. Al-Insyirah : 6</b></p>
-<br>
-<div class="arab">لَا تَحْزَنْ إِنَّ اللَّهَ مَعَنَا</div>
-<div class="latin">La tahzan, innallaha ma'ana</div>
-<p class="arti">"Jangan sedih, sesungguhnya Allah bersama kita"<br><b style="color:#00FF41">QS. At-Taubah : 40</b></p>
-<br>
-<div class="arab">وَقُلِ اعْمَلُوا فَسَيَرَى اللَّهُ عَمَلَكُمْ</div>
-<div class="latin">Wa qul i'malu, fasayarallahu 'amalakum</div>
-<p class="arti">"Dan katakanlah: Bekerjalah kalian, maka Allah akan melihat pekerjaanmu"<br><b style="color:#00FF41">QS. At-Taubah : 105</b></p>
+<div class="hero">
+<div class="bola-wrap"><div class="bola"></div><div class="bola" style="animation-delay:.5s"></div><div class="bola" style="animation-delay:1s"></div></div>
+<h1>KKMM<br><i>WEEKEND</i><br><em>PARTY!</em></h1>
+<p>Diskotik Kampung Kecil - Sabtu Malam<br>Lampu nyala, musik jalan, tim joget dulu, besok gas kerja!</p>
+<div class="badge">SABTU 21 NOV 2026 • KAMPUNG KECIL • BEKASI</div>
 </div>
 
-<div class="card"><b>🎯 3 JANJI BESOK:</b><p>1. Dateng on time, senyum dulu sebelum ngeluh.<br>2. Kalo cape, bilang. Jangan dipendem, jangan dilempar ke temen.<br>3. 1 tugas = 1 nama. Beres, pulang, dapet pahala + dapet duit.</p></div>
-<div class="card" onclick="hantuKlik('pocong',this)" style="cursor:pointer"><b>👻 KATA SI POCONG - KLIK:</b><p>"Gue aja yang udah mati masih lompat-lompat kerja, masa lu yang masih hidup banyak ngeluh? Gas!"</p></div>
-<div class="card" onclick="hantuKlik('kuntilanak',this)" style="cursor:pointer"><b>🧛‍♀️ KATA SI KUNTILANAK - KLIK:</b><p>"Ketawa gue serem, tapi lebih serem lagi kalo tim bubar gara-gara baperan. Jangan baper, ngobrol aja."</p></div>
+<div class="stage">
+<div class="stage-top"><b>🎤 PANGGUNG UTAMA</b><span>● ON AIR</span></div>
+<div class="lampu-strip"></div>
+<p style="font-size:11px;color:#aaa">Klik karakter Roblox-nya, dia joget + ngomong!</p>
+<div class="roblox-row joget" id="panggung">
+  <div class="rb c-den" onclick="klikRb('den',this)"><div class="rb-head"><div class="rambut"></div><div class="mata l"></div><div class="mata r"></div><div class="mulut"></div></div><div class="rb-body">ATMA</div><div class="rb-arms"><i></i><i></i></div><div class="rb-legs"><i></i><i></i></div><div class="rb-name">DEN<small>DJ / KETUA</small></div></div>
+  <div class="rb c-ayu" onclick="klikRb('ayu',this)"><div class="rb-head"><div class="rambut" style="background:#FF00FF"></div><div class="mata l"></div><div class="mata r"></div><div class="mulut"></div></div><div class="rb-body">ELIS</div><div class="rb-arms"><i></i><i></i></div><div class="rb-legs"><i></i><i></i></div><div class="rb-name">AYU<small>DANCER</small></div></div>
+  <div class="rb c-budi" onclick="klikRb('budi',this)"><div class="rb-head"><div class="rambut" style="background:#000"></div><div class="mata l"></div><div class="mata r"></div><div class="mulut"></div></div><div class="rb-body">MIROH</div><div class="rb-arms"><i></i><i></i></div><div class="rb-legs"><i></i><i></i></div><div class="rb-name">BUDI<small>VOKAL</small></div></div>
+  <div class="rb c-sari" onclick="klikRb('sari',this)"><div class="rb-head"><div class="rambut" style="background:#FFD700"></div><div class="mata l"></div><div class="mata r"></div><div class="mulut"></div></div><div class="rb-body">AMEL</div><div class="rb-arms"><i></i><i></i></div><div class="rb-legs"><i></i><i></i></div><div class="rb-name">SARI<small>MC</small></div></div>
+</div>
+<div class="floor"></div>
+<p style="font-size:11px;color:#FFD700;margin-top:8px;font-weight:800">DJ DEN ON THE MIX - LAGU PARTY NONSTOP</p>
+</div>
 
-<button class="btn btn-red" id="playBtn" onclick="toggleMusik()">▶️ PUTAR MUSIK HOROR - KLIK DISINI</button>
-<button class="btn btn-dark" onclick="hantuKlik('kuntilanak',this)">😱 KLIK - DENGERIN KETAWA KUNTILANAK</button>
-<a href="https://wa.me/6289509852019?text=Halo%20Min%20Den,%20besok%20siap%20gas%20kerja!%20Bismillah" target="_blank" style="text-decoration:none"><button class="btn btn-green">💬 GAS BESOK - CHAT DEN DI WA</button></a>
+<div class="card">
+<h2>SEMANGAT YA KAWAN-KAWAN <b>KKMM!</b><br><i>BESOK WEEKEND, KITA GAS KERJA!</i></h2>
+<p>Weekend orang lain liburan, kita liburan sambil cuan. Cape dikit itu wajar, yang penting kompak, happy, dan jangan ngeluh terus. Kerja bareng, cape bareng, untung bareng.</p>
+<p><b style="color:#FFD700">JANGAN CAPE. JANGAN NGELUH. ALLAH SUKA SAMA YANG KERJA KERAS TAPI TETEP BERSYUKUR.</b></p>
+<div class="poin">
+<div><b>1️⃣</b><p><strong>Dateng On Time + Senyum</strong><br>Weekend harus happy. Jangan cemberut, pelanggan juga jadi gak betah.</p></div>
+<div><b>2️⃣</b><p><strong>Cape Bilang, Jangan Ngeluh Terus</strong><br>Kalo cape bilang aja, istirahat 5 menit, minum, gas lagi. Bukan ngomel seharian.</p></div>
+<div><b>3️⃣</b><p><strong>1 Tugas = 1 Nama</strong><br>Jangan saling lempar. Beres, joget lagi, pulang bawa duit.</p></div>
+</div>
+</div>
 
-<audio id="musik" src="lagu.mp3" loop preload="auto"></audio>
+<div class="quote"><h3>KKMM SEMANGAT!<br>WEEKEND GAS!</h3><p>Bismillah besok rezeki lancar, pelanggan rame, tim kompak. Aamiin.</p></div>
+
+<div class="card" style="text-align:center">
+<button class="btn btn-pink" id="playBtn" onclick="toggleMusik()">⏸️ MATIKAN MUSIK DJ</button>
+<button class="btn btn-cyan" onclick="jogetBareng()">💃 JOGET BARENG - SEMUA JOGET!</button>
+<button class="btn btn-gelap" onclick="klikRb('ayu',null)">🎤 KLIK - DENGERIN YEL-YEL KKMM</button>
+<a href="https://wa.me/6289509852019?text=Halo%20Den,%20KKMM%20SEMANGAT!%20Besok%20weekend%20kita%20gas%20kerja,%20jangan%20cape%20jangan%20ngeluh!%20Bismillah" target="_blank"><button class="btn btn-hijau">💬 KKMM SEMANGAT - CHAT DEN DI WA</button></a>
+</div>
+
+<audio id="musik" src="lagu.mp3" loop preload="auto" autoplay muted playsinline></audio>
 <audio id="ketawaAudio" src="ketawa.mp3" preload="auto"></audio>
 
-<p style="font-size:11px;color:#888;margin-top:14px;line-height:1.7">Jl. Raya Bekasi, Kampung Kecil, Bekasi 17100<br>DENZ PULSA © 2026 - Dibuat oleh Dimas Asy'syafii<br>Bismillah, besok rezeki lancar. Aamiin 🤲</p>
+<div class="footer">Jl. Raya Bekasi, Kampung Kecil, Bekasi 17100<br>KKMM SEMANGAT © 2026 - Dibuat oleh Dimas Asy'syafii<br>WA Den: 0895-0985-2019 • IG @denzpulsa</div>
 
 <script>
 let jalan=false;
-let audioCtx=null;
+let partyDibuka=false;
+function showToast(t){let x=document.getElementById('toast');x.innerText=t;x.classList.add('show');setTimeout(()=>x.classList.remove('show'),2500);}
+function confetti(){
+  let warna=['#FF00FF','#00E5FF','#FFD700','#00FF41','#FF0000'];
+  for(let i=0;i<50;i++){
+    let c=document.createElement('div'); c.className='confetti';
+    c.style.left=Math.random()*100+'vw'; c.style.width='10px'; c.style.height='10px';
+    c.style.background=warna[i%5]; c.style.borderRadius=Math.random()>0.5?'50%':'0';
+    c.style.animationDuration=(1.5+Math.random()*2)+'s'; c.style.fontSize='16px';
+    if(Math.random()>0.7) c.innerText='🎉';
+    document.body.appendChild(c); setTimeout(()=>c.remove(),4000);
+  }
+}
+// COBA AUTOPLAY PAS MASUK - kalo browser ngizinin langsung nyala
+window.addEventListener('load', ()=>{
+  let a=document.getElementById('musik');
+  a.muted=true; a.play().then(()=>{
+    // kalo berhasil autoplay muted, coba unmute pelan-pelan
+    setTimeout(()=>{ a.muted=false; jalan=true; document.getElementById('playBtn').innerText='⏸️ MATIKAN MUSIK DJ'; }, 800);
+  }).catch(()=>{ /* diblokir, nunggu klik BUKA PARTY */ });
+  // kalo user klik di mana aja, langsung unmute
+  document.addEventListener('click', function unmuteSekali(){ a.muted=false; a.play().catch(()=>{}); jalan=true; document.getElementById('playBtn').innerText='⏸️ MATIKAN MUSIK DJ'; }, {once:false});
+});
+function bukaParty(){
+  let a=document.getElementById('musik');
+  a.muted=false; a.volume=1;
+  a.play().then(()=>{ jalan=true; document.getElementById('playBtn').innerText='⏸️ MATIKAN MUSIK DJ'; }).catch(()=>{ showToast('File lagu.mp3 belum ada di GitHub bro! Upload dulu!'); });
+  document.getElementById('gate').classList.add('hide');
+  partyDibuka=true; confetti();
+  showToast('🪩 PARTY KKMM DIBUKA! SEMUA JOGET! BESOK WEEKEND GAS!');
+  document.getElementById('panggung').classList.add('joget');
+  setTimeout(()=>{ document.getElementById('gate').style.display='none'; }, 600);
+  // yel-yel
+  try{ let u=new SpeechSynthesisUtterance('KKMM semangat! Party dibuka! Besok weekend gas kerja!'); u.lang='id-ID'; u.rate=1.2; u.pitch=1.4; speechSynthesis.speak(u); }catch(e){}
+}
+function masukDiem(){
+  document.getElementById('gate').classList.add('hide');
+  setTimeout(()=>{ document.getElementById('gate').style.display='none'; }, 600);
+  showToast('Masuk mode diem. Klik tombol PUTAR MUSIK kalo mau joget.');
+}
 function toggleMusik(){
   let a=document.getElementById('musik');
-  if(!jalan){ a.play().catch(()=>{ showToast('Klik lagi bro, browser nge-block autoplay. File lagu.mp3 belum ada? Cek di GitHub!'); }); document.getElementById('playBtn').innerText='⏸️ MATIKAN MUSIK'; jalan=true; }
-  else{ a.pause(); document.getElementById('playBtn').innerText='▶️ PUTAR MUSIK HOROR - KLIK DISINI'; jalan=false; }
+  if(!jalan){ a.muted=false; a.play().catch(()=>showToast('File lagu.mp3 belum ada! Upload dulu!')); document.getElementById('playBtn').innerText='⏸️ MATIKAN MUSIK DJ'; jalan=true; document.getElementById('panggung').classList.add('joget'); }
+  else{ a.pause(); document.getElementById('playBtn').innerText='▶️ PUTAR MUSIK DJ PARTY'; jalan=false; document.getElementById('panggung').classList.remove('joget'); }
 }
-function showToast(teks){
-  let t=document.getElementById('toast'); t.innerText=teks; t.classList.add('show');
-  setTimeout(()=>t.classList.remove('show'),2200);
+function klikRb(siapa, el){
+  if(el){ el.style.transform='scale(1.25) rotate(8deg)'; setTimeout(()=>el.style.transform='',350); }
+  let teks={ den:'DJ DEN: Gas! Besok weekend KKMM joget + kerja + cuan!', ayu:'AYU: KKMM SEMANGAT! Jangan ngeluh, joget aja dulu!', budi:'BUDI: Cape? Istirahat bentar, minum es teh, gas lagi!', sari:'SARI: Weekend ini kita yang paling rame se-Kampung Kecil!' };
+  showToast(teks[siapa]||teks.den);
+  let k=document.getElementById('ketawaAudio'); k.currentTime=0; k.play().catch(()=>{});
+  try{ let u=new SpeechSynthesisUtterance(siapa==='den'?'KKMM semangat! Besok weekend gas kerja!':'KKMM semangat! Jangan cape jangan ngeluh!'); u.lang='id-ID'; u.rate=1.2; u.pitch=1.3; speechSynthesis.speak(u); }catch(e){}
 }
-function bunyiKetawaBuatan(jenis){
-  try{
-    if(!audioCtx) audioCtx=new (window.AudioContext||window.webkitAudioContext)();
-    if(audioCtx.state==='suspended') audioCtx.resume();
-    let base = jenis==='kuntilanak'?900 : jenis==='pocong'?300 : jenis==='tuyul'?1200 : jenis==='genderuwo'?150 : 700;
-    for(let i=0;i<6;i++){
-      let o=audioCtx.createOscillator(); let g=audioCtx.createGain();
-      o.type = jenis==='genderuwo'?'sawtooth':'square';
-      let t=audioCtx.currentTime + i*0.18;
-      o.frequency.setValueAtTime(base + Math.random()*500, t);
-      o.frequency.exponentialRampToValueAtTime(base*0.4, t+0.15);
-      g.gain.setValueAtTime(0.0001,t); g.gain.exponentialRampToValueAtTime(0.25,t+0.02); g.gain.exponentialRampToValueAtTime(0.0001,t+0.15);
-      o.connect(g); g.connect(audioCtx.destination); o.start(t); o.stop(t+0.16);
-    }
-  }catch(e){}
+function jogetBareng(){
+  let p=document.getElementById('panggung'); p.classList.remove('joget'); void p.offsetWidth; p.classList.add('joget');
+  confetti(); showToast('SEMUA JOGET! KKMM SEMANGAT! BESOK WEEKEND GAS!');
 }
-function hantuKlik(jenis, el){
-  if(el) { el.style.transform='scale(1.5) rotate(12deg)'; setTimeout(()=>el.style.transform='',350); }
-  let teks = {
-    pocong: 'POCONG: Duk... Duk... Duk... Lompat terus! Jangan ngeluh! 👻',
-    kuntilanak: 'KUNTILANAK: Hihihihihihi... Jangan ngeluh ya! Besok semangat! 🧛‍♀️',
-    tuyul: 'TUYUL: Hihihi... Duitnya jangan diambil, kerjanya yang rajin! 👶',
-    genderuwo: 'GENDERUWO: HOOOAAAMM... Cape? Tidur bentar, besok gas lagi! 👹',
-    sundel: 'SUNDEL BOLONG: Hihihi... Jangan baperan, ngobrol aja! 💀'
-  };
-  showToast(teks[jenis]||teks.kuntilanak);
-  // Coba putar file ketawa.mp3 dulu
-  let k=document.getElementById('ketawaAudio');
-  k.currentTime=0;
-  let p=k.play();
-  if(p) p.catch(()=>{ bunyiKetawaBuatan(jenis); });
-  // Kalo file ga ada, 0.3 detik kemudian bunyi buatan tetep jalan biar ga diem
-  setTimeout(()=>{ if(k.paused) bunyiKetawaBuatan(jenis); }, 350);
-}
-function ketawa(){ hantuKlik('kuntilanak', null); }
 </script></body></html>
