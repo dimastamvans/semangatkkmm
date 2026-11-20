@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="id"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>KK MM - MALAM SABTU HOROR</title>
+<link href="https://fonts.googleapis.com/css2?family=Creepster&family=Poppins:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+body{background:#050505;color:#fff;overflow-x:hidden;text-align:center;padding-bottom:40px}
+.moon{width:90px;height:90px;background:#FF0000;border-radius:50%;box-shadow:0 0 80px #FF0000,0 0 120px #FF0000;margin:18px auto 0;position:relative}
+.moon:after{content:'🌕';position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:50px;opacity:.25}
+h1{font-family:'Creepster',cursive;font-size:52px;color:#FF0000;text-shadow:0 0 20px #FF0000,0 0 40px #000;letter-spacing:2px;margin-top:6px}
+h1 span{color:#fff}.sub{color:#A0B3A8;font-size:12px;letter-spacing:3px}
+.hantu{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin:16px 0}
+.hantu span{font-size:48px;animation:goyang 2s infinite;display:inline-block;cursor:pointer;transition:.2s;background:#111;border:1px solid #333;width:68px;height:68px;border-radius:50%;line-height:68px}
+.hantu span:active{transform:scale(1.4) rotate(10deg);background:#FF0000}
+.hantu span:nth-child(2){animation-delay:.3s}.hantu span:nth-child(3){animation-delay:.6s}.hantu span:nth-child(4){animation-delay:.9s}.hantu span:nth-child(5){animation-delay:1.2s}
+@keyframes goyang{0%,100%{transform:translateY(0) rotate(-3deg)}50%{transform:translateY(-14px) rotate(3deg)}}
+.kabut{background:linear-gradient(180deg,#111,#050505);border:1px solid #FF0000;border-radius:18px;margin:14px;padding:18px;box-shadow:0 0 25px #FF000022}
+.arab{font-size:26px;color:#00FF41;line-height:1.6;direction:rtl}.latin{font-size:12px;color:#FFD700}.arti{font-size:13px;color:#ddd;line-height:1.6}
+.semangat{font-size:22px;font-weight:900;line-height:1.4;margin:10px 0}.semangat b{color:#FF0000}.semangat i{color:#00FF41;font-style:normal}
+.card{background:#0D0D0D;border:1px solid #333;border-radius:14px;padding:14px;margin:10px;text-align:left}.card b{color:#FF8C00}.card p{font-size:13px;color:#ccc;line-height:1.6}
+.btn{border:none;padding:14px 18px;border-radius:12px;font-weight:900;width:100%;margin:6px 0;cursor:pointer;font-size:14px}
+.btn-red{background:#FF0000;color:#fff;box-shadow:0 0 20px #FF0000}.btn-green{background:#00FF41;color:#000}.btn-dark{background:#222;color:#fff}
+.darah{color:#FF0000;font-size:12px}
+#toast{position:fixed;top:38%;left:50%;transform:translate(-50%,-50%) scale(0);background:#FF0000;color:#fff;padding:14px 18px;border-radius:12px;font-weight:900;z-index:999;box-shadow:0 0 30px #FF0000;transition:.2s;max-width:85%;font-size:14px;line-height:1.4}
+#toast.show{transform:translate(-50%,-50%) scale(1)}
+</style></head><body>
+
+<div id="toast"></div>
+<div class="moon"></div>
+<h1>KK <span>MM</span></h1>
+<p class="sub">KAMPUNG KECIL • MALAM SABTU • 21 NOV 2026</p>
+<p class="darah">🩸 Jangan buka sendirian tengah malam... 🩸</p>
+
+<div class="hantu">
+<span onclick="hantuKlik('pocong',this)" title="Pocong - Klik!">👻</span>
+<span onclick="hantuKlik('kuntilanak',this)" title="Kuntilanak - Klik!">🧛‍♀️</span>
+<span onclick="hantuKlik('tuyul',this)" title="Tuyul - Klik!">👶</span>
+<span onclick="hantuKlik('genderuwo',this)" title="Genderuwo - Klik!">👹</span>
+<span onclick="hantuKlik('sundel',this)" title="Sundel Bolong - Klik!">💀</span>
+</div>
+<p style="font-size:11px;color:#888">Klik hantunya SATU-SATU, suaranya beda-beda! 👆</p>
+
+<div class="kabut">
+<p style="color:#FF8C00;font-weight:800;letter-spacing:2px">⚠️ PESAN BUAT TIM KAMPUNG KECIL ⚠️</p>
+<div class="semangat">SEMANGAT YA<br>KAWAN-KAWAN!<br><b>BESOK KITA KERJA,</b><br><i>JANGAN CAPE,</i><br><i>JANGAN NGELUH.</i></div>
+<p style="font-size:14px;line-height:1.6">ALLAH GASUKA SAMA YANG BANYAK NGELUH.<br>Cape itu wajar, ngeluh terus yang bikin rezeki seret.<br>Kerja bareng, cape bareng, untung bareng.</p>
+<br>
+<div class="arab">إِنَّ مَعَ الْعُسْرِ يُسْرًا</div>
+<div class="latin">Inna ma'al 'usri yusra</div>
+<p class="arti">"Sesungguhnya bersama kesulitan ada kemudahan"<br><b style="color:#00FF41">QS. Al-Insyirah : 6</b></p>
+<br>
+<div class="arab">لَا تَحْزَنْ إِنَّ اللَّهَ مَعَنَا</div>
+<div class="latin">La tahzan, innallaha ma'ana</div>
+<p class="arti">"Jangan sedih, sesungguhnya Allah bersama kita"<br><b style="color:#00FF41">QS. At-Taubah : 40</b></p>
+<br>
+<div class="arab">وَقُلِ اعْمَلُوا فَسَيَرَى اللَّهُ عَمَلَكُمْ</div>
+<div class="latin">Wa qul i'malu, fasayarallahu 'amalakum</div>
+<p class="arti">"Dan katakanlah: Bekerjalah kalian, maka Allah akan melihat pekerjaanmu"<br><b style="color:#00FF41">QS. At-Taubah : 105</b></p>
+</div>
+
+<div class="card"><b>🎯 3 JANJI BESOK:</b><p>1. Dateng on time, senyum dulu sebelum ngeluh.<br>2. Kalo cape, bilang. Jangan dipendem, jangan dilempar ke temen.<br>3. 1 tugas = 1 nama. Beres, pulang, dapet pahala + dapet duit.</p></div>
+<div class="card" onclick="hantuKlik('pocong',this)" style="cursor:pointer"><b>👻 KATA SI POCONG - KLIK:</b><p>"Gue aja yang udah mati masih lompat-lompat kerja, masa lu yang masih hidup banyak ngeluh? Gas!"</p></div>
+<div class="card" onclick="hantuKlik('kuntilanak',this)" style="cursor:pointer"><b>🧛‍♀️ KATA SI KUNTILANAK - KLIK:</b><p>"Ketawa gue serem, tapi lebih serem lagi kalo tim bubar gara-gara baperan. Jangan baper, ngobrol aja."</p></div>
+
+<button class="btn btn-red" id="playBtn" onclick="toggleMusik()">▶️ PUTAR MUSIK HOROR - KLIK DISINI</button>
+<button class="btn btn-dark" onclick="hantuKlik('kuntilanak',this)">😱 KLIK - DENGERIN KETAWA KUNTILANAK</button>
+<a href="https://wa.me/6289509852019?text=Halo%20Min%20Den,%20besok%20siap%20gas%20kerja!%20Bismillah" target="_blank" style="text-decoration:none"><button class="btn btn-green">💬 GAS BESOK - CHAT DEN DI WA</button></a>
+
+<audio id="musik" src="lagu.mp3" loop preload="auto"></audio>
+<audio id="ketawaAudio" src="ketawa.mp3" preload="auto"></audio>
+
+<p style="font-size:11px;color:#888;margin-top:14px;line-height:1.7">Jl. Raya Bekasi, Kampung Kecil, Bekasi 17100<br>DENZ PULSA © 2026 - Dibuat oleh Dimas Asy'syafii<br>Bismillah, besok rezeki lancar. Aamiin 🤲</p>
+
+<script>
+let jalan=false;
+let audioCtx=null;
+function toggleMusik(){
+  let a=document.getElementById('musik');
+  if(!jalan){ a.play().catch(()=>{ showToast('Klik lagi bro, browser nge-block autoplay. File lagu.mp3 belum ada? Cek di GitHub!'); }); document.getElementById('playBtn').innerText='⏸️ MATIKAN MUSIK'; jalan=true; }
+  else{ a.pause(); document.getElementById('playBtn').innerText='▶️ PUTAR MUSIK HOROR - KLIK DISINI'; jalan=false; }
+}
+function showToast(teks){
+  let t=document.getElementById('toast'); t.innerText=teks; t.classList.add('show');
+  setTimeout(()=>t.classList.remove('show'),2200);
+}
+function bunyiKetawaBuatan(jenis){
+  try{
+    if(!audioCtx) audioCtx=new (window.AudioContext||window.webkitAudioContext)();
+    if(audioCtx.state==='suspended') audioCtx.resume();
+    let base = jenis==='kuntilanak'?900 : jenis==='pocong'?300 : jenis==='tuyul'?1200 : jenis==='genderuwo'?150 : 700;
+    for(let i=0;i<6;i++){
+      let o=audioCtx.createOscillator(); let g=audioCtx.createGain();
+      o.type = jenis==='genderuwo'?'sawtooth':'square';
+      let t=audioCtx.currentTime + i*0.18;
+      o.frequency.setValueAtTime(base + Math.random()*500, t);
+      o.frequency.exponentialRampToValueAtTime(base*0.4, t+0.15);
+      g.gain.setValueAtTime(0.0001,t); g.gain.exponentialRampToValueAtTime(0.25,t+0.02); g.gain.exponentialRampToValueAtTime(0.0001,t+0.15);
+      o.connect(g); g.connect(audioCtx.destination); o.start(t); o.stop(t+0.16);
+    }
+  }catch(e){}
+}
+function hantuKlik(jenis, el){
+  if(el) { el.style.transform='scale(1.5) rotate(12deg)'; setTimeout(()=>el.style.transform='',350); }
+  let teks = {
+    pocong: 'POCONG: Duk... Duk... Duk... Lompat terus! Jangan ngeluh! 👻',
+    kuntilanak: 'KUNTILANAK: Hihihihihihi... Jangan ngeluh ya! Besok semangat! 🧛‍♀️',
+    tuyul: 'TUYUL: Hihihi... Duitnya jangan diambil, kerjanya yang rajin! 👶',
+    genderuwo: 'GENDERUWO: HOOOAAAMM... Cape? Tidur bentar, besok gas lagi! 👹',
+    sundel: 'SUNDEL BOLONG: Hihihi... Jangan baperan, ngobrol aja! 💀'
+  };
+  showToast(teks[jenis]||teks.kuntilanak);
+  // Coba putar file ketawa.mp3 dulu
+  let k=document.getElementById('ketawaAudio');
+  k.currentTime=0;
+  let p=k.play();
+  if(p) p.catch(()=>{ bunyiKetawaBuatan(jenis); });
+  // Kalo file ga ada, 0.3 detik kemudian bunyi buatan tetep jalan biar ga diem
+  setTimeout(()=>{ if(k.paused) bunyiKetawaBuatan(jenis); }, 350);
+}
+function ketawa(){ hantuKlik('kuntilanak', null); }
+</script></body></html>
