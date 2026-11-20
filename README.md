@@ -1,2 +1,0 @@
-# semangatkkmm
-hahakampang
